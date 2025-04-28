@@ -21,7 +21,7 @@ class DepartmentResource extends Resource
 {
     protected static ?string $model = Department::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-s-building-office-2';
 
     public static function form(Form $form): Form
     {
@@ -51,6 +51,8 @@ class DepartmentResource extends Resource
             ]);
     }
 
+    
+
     public static function getRelations(): array
     {
         return [
@@ -58,10 +60,6 @@ class DepartmentResource extends Resource
         ];
     }
 
-    protected function getRedirectUrl(): string
-    {
-        return $this->getResource()::getUrl('index');
-    }
 
     public static function getPages(): array
     {
